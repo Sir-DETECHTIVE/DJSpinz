@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ SPINZ FX | Stage Special Effects & Pyrotechnics Showcase</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@500;700;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#050509',
+                        darkCard: '#0f0f18',
+                        neonCyan: '#00f3ff',
+                        neonPink: '#ff007f',
+                        neonGold: '#ffb700',
+                        neonPurple: '#a855f7',
+                        neonFlame: '#ff5500',
+                    },
+                    fontFamily: {
+                        orbitron: ['Orbitron', 'sans-serif'],
+                        rajdhani: ['Rajdhani', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #050509; }
+        ::-webkit-scrollbar-thumb { background: #1d1d2f; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00f3ff; }
+
+        .glass-panel {
+            background: rgba(15, 15, 24, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .text-gradient-cyan {
+            background: linear-gradient(135deg, #ffffff 0%, #00f3ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text-gradient-pink {
+            background: linear-gradient(135deg, #ffffff 0%, #ff007f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cyber-button {
+            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+            transition: all 0.3s ease;
+        }
+
+        .stage-grid-bg {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+
+        .fade-slide {
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-100 font-inter overflow-x-hidden selection:bg-neonCyan selection:text-black">
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#top" class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-neonPink via-neonCyan to-neonGold p-0.5">
+                    <div class="w-full h-full bg-darkBg rounded-[10px] flex items-center justify-center">
+                        <i class="fa-solid fa-bolt text-neonCyan text-base"></i>
+                    </div>
+                </div>
+                <div>
+                    <span class="font-orbitron font-black text-xl text-white">DJ SPINZ <span class="text-neonCyan">FX</span></span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 font-rajdhani text-sm font-bold uppercase text-slate-300">
+                <a href="#stage-simulator" class="hover:text-neonPink transition-colors flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-neonPink animate-pulse"></span> Visualizer
+                </a>
+                <a href="#gallery" class="hover:text-neonGold transition-colors">Photos</a>
+                <a href="#inquire" class="hover:text-emerald-400 transition-colors">Inquire</a>
+            </nav>
+
+            <a href="#inquire" class="cyber-button px-4 py-2 bg-gradient-to-r from-neonCyan to-blue-600 text-black font-orbitron font-black text-xs">
+                GET IN TOUCH
+            </a>
+        </div>
+    </header>
+
+    <!-- Compact Hero Section -->
+    <section id="top" class="relative py-12 stage-grid-bg border-b border-slate-900 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900 border border-neonGold/40 text-neonGold text-[11px] font-orbitron mb-4">
+                <i class="fa-solid fa-star text-amber-400"></i> SPECIAL EFFECTS SHOWCASE
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl font-black font-orbitron text-white leading-tight">
+                DJ SPINZ <span class="text-gradient-cyan">SPECIAL EFFECTS</span> & <span class="text-gradient-pink">PYROTECHNICS</span>
+            </h1>
+
+            <p class="text-slate-300 font-rajdhani text-base sm:text-lg max-w-2xl mx-auto mt-3">
+                Festival-grade cold pyrotechnics, CO2 jets, low fog, RGB lasers, confetti, and flame cannons.
+            </p>
+
+            <div class="flex items-center justify-center gap-4 mt-6">
+                <a href="#stage-simulator" class="cyber-button px-6 py-3 bg-gradient-to-r from-neonPink via-purple-600 to-neonCyan text-white font-orbitron font-bold text-xs tracking-wider">
+                    <i class="fa-solid fa-gamepad mr-2"></i> STAGE VISUALIZER
+                </a>
+                <a href="#gallery" class="px-6 py-3 rounded-lg bg-slate-900 border border-slate-700 text-white font-orbitron font-bold text-xs hover:border-neonGold transition-all">
+                    <i class="fa-solid fa-images mr-2 text-neonGold"></i> GALLERY
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Visualizer -->
+    <section id="stage-simulator" class="py-10 stage-grid-bg border-b border-slate-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-4">
+                <div>
+                    <span class="text-[10px] font-orbitron font-bold tracking-widest text-neonPink uppercase">Live Visualizer</span>
+                    <h2 class="text-2xl font-black font-orbitron text-white">INTERACTIVE STAGE FX SIMULATOR</h2>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button onclick="triggerAllSimFX()" class="cyber-button px-4 py-2 bg-gradient-to-r from-neonPink to-neonGold text-black font-orbitron font-extrabold text-xs">
+                        BLAST ALL FX
+                    </button>
+                    <button onclick="clearSimStage()" class="px-3 py-2 rounded bg-slate-900 border border-slate-700 text-slate-300 font-orbitron text-xs hover:text-white">
+                        RESET
+                    </button>
+                </div>
+            </div>
+
+            <div class="glass-panel p-4 rounded-2xl border border-neonCyan/40">
+                <div class="relative w-full h-[260px] sm:h-[340px] bg-[#020206] rounded-xl overflow-hidden border border-slate-800">
+                    <canvas id="interactive-stage-canvas" class="w-full h-full block cursor-pointer"></canvas>
+                </div>
+
+                <div class="grid grid-cols-3 sm:grid-cols-6 gap-2 mt-4">
+                    <button id="sim-btn-sparks" onclick="toggleFxSystem('sparks')" class="p-2.5 rounded-lg bg-slate-900 border border-neonGold/40 text-neonGold font-orbitron text-[11px] font-bold hover:bg-neonGold/20 flex flex-col items-center gap-1">
+                        <i class="fa-solid fa-fire-flame-curved text-lg"></i>
+                        <span>SPARKS</span>
+                    </button>
+                    <button id="sim-btn-co2" onclick="toggleFxSystem('co2')" class="p-2.5 rounded-lg bg-slate-900 border border-neonCyan/40 text-neonCyan font-orbitron text-[11px] font-bold hover:bg-neonCyan/20 flex flex-col items-center gap-1">
+                        <i class="fa-solid fa-wind text-lg"></i>
+                        <span>CO2 CRYO</span>
+                    </button>
+                    <button id="sim-btn-fog" onclick="toggleFxSystem('fog')" class="p-2.5 rounded-lg bg-slate-900 border border-purple-500/40 text-purple-300 font-orbitron text-[11px] font-bold hover:bg-purple-500/20 flex flex-col items-center gap-1">
+                        <i class="fa-solid fa-cloud text-lg"></i>
+                        <span>LOW FOG</span>
+                    </button>
+                    <button id="sim-btn-lasers" onclick="toggleFxSystem('lasers')" class="p-2.5 rounded-lg bg-slate-900 border border-neonPink/40 text-neonPink font-orbitron text-[11px] font-bold hover:bg-neonPink/20 flex flex-col items-center gap-1">
+                        <i class="fa-solid fa-bolt text-lg"></i>
+                        <span>LASERS</span>
+                    </button>
+                    <button id="sim-btn-confetti" onclick="toggleFxSystem('confetti')" class="p-2.5 rounded-lg bg-slate-900 border border-emerald-500/40 text-emerald-400 font-orbitron text-[11px] font-bold hover:bg-emerald-500/20 flex flex-col items-center gap-1">
+                        <i class="fa-solid fa-paper-plane text-lg"></i>
+                        <span>CONFETTI</span>
+                    </button>
+                    <button id="sim-btn-flames" onclick="toggleFxSystem('flames')" class="p-2.5 rounded-lg bg-slate-900 border border-neonFlame/40 text-neonFlame font-orbitron text-[11px] font-bold hover:bg-neonFlame/20 flex flex-col items-center gap-1">
+                        <i class="fa-solid fa-fire text-lg"></i>
+                        <span>FLAMES</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auto-Sync Photo Gallery (No Manual Buttons) -->
+    <section id="gallery" class="py-10 bg-slate-950/90 border-b border-slate-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="mb-6">
+                <span class="text-[10px] font-orbitron font-bold tracking-widest text-neonGold uppercase">Auto-Rotating Showcase</span>
+                <h2 class="text-2xl font-black font-orbitron text-white">EVENT PHOTO SHOWCASE</h2>
+            </div>
+
+            <!-- Slideshow Container -->
+            <div class="glass-panel rounded-2xl p-3 border border-neonCyan/30 mb-6 relative overflow-hidden">
+                <div class="relative w-full h-[280px] sm:h-[420px] bg-slate-950 rounded-xl overflow-hidden group">
+                    <img id="slideshow-img" src="" alt="DJ Spinz FX Stage Photo" referrerpolicy="no-referrer" class="w-full h-full object-cover fade-slide">
+                    
+                    <div class="absolute bottom-4 right-4 flex items-center gap-2">
+                        <button onclick="prevSlide()" class="w-9 h-9 rounded-full bg-black/60 border border-white/20 text-white flex items-center justify-center hover:bg-neonCyan hover:text-black transition-all">
+                            <i class="fa-solid fa-arrow-left text-xs"></i>
+                        </button>
+                        <button onclick="nextSlide()" class="w-9 h-9 rounded-full bg-black/60 border border-white/20 text-white flex items-center justify-center hover:bg-neonCyan hover:text-black transition-all">
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thumbnail Grid -->
+            <div id="gallery-grid" class="grid grid-cols-3 sm:grid-cols-6 gap-3"></div>
+        </div>
+    </section>
+
+    <!-- Clean Contact Inquiry Form -->
+    <section id="inquire" class="py-12 bg-slate-950">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <span class="text-[10px] font-orbitron font-bold tracking-widest text-emerald-400 uppercase">Direct Booking</span>
+                <h2 class="text-2xl sm:text-3xl font-black font-orbitron text-white mt-1">CHECK EVENT AVAILABILITY</h2>
+            </div>
+
+            <form id="inquiry-form" onsubmit="handleInquirySubmit(event)" class="glass-panel p-6 sm:p-8 rounded-2xl border border-neonCyan/30 space-y-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-[11px] font-orbitron font-bold text-slate-300 uppercase mb-1">Your Name *</label>
+                        <input type="text" required placeholder="Name" class="w-full px-3 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-neonCyan text-xs">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-orbitron font-bold text-slate-300 uppercase mb-1">Email Address *</label>
+                        <input type="email" required placeholder="Email" class="w-full px-3 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-neonCyan text-xs">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-[11px] font-orbitron font-bold text-slate-300 uppercase mb-1">Phone Number *</label>
+                        <input type="tel" required placeholder="Phone" class="w-full px-3 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-neonCyan text-xs">
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-orbitron font-bold text-slate-300 uppercase mb-1">Event Date *</label>
+                        <input type="date" required class="w-full px-3 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-neonCyan text-xs">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-[11px] font-orbitron font-bold text-slate-300 uppercase mb-1">Event Location / Venue *</label>
+                    <input type="text" required placeholder="Venue Name, City" class="w-full px-3 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-neonCyan text-xs">
+                </div>
+
+                <div>
+                    <label class="block text-[11px] font-orbitron font-bold text-slate-300 uppercase mb-1">Message / FX Requirements</label>
+                    <textarea rows="3" placeholder="Tell us about your event timeline or specific FX needed..." class="w-full px-3 py-2.5 rounded-lg bg-slate-900 border border-slate-700 text-white focus:outline-none focus:border-neonCyan text-xs"></textarea>
+                </div>
+
+                <button type="submit" class="cyber-button w-full py-3 bg-gradient-to-r from-neonCyan via-cyan-400 to-blue-600 text-black font-orbitron font-black text-xs tracking-wider">
+                    SEND INQUIRY
+                </button>
+
+                <div id="inquiry-success" class="hidden p-3 rounded-lg bg-emerald-500/20 border border-emerald-500 text-emerald-300 font-orbitron text-xs text-center font-bold">
+                    INQUIRY SENT! WE WILL CONTACT YOU SHORTLY.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-slate-900 py-6 text-center font-rajdhani text-xs text-slate-500">
+        <p>© 2026 DJ SPINZ FX. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        /* ----------------------------------------------------
+           1. AUTOMATIC GOOGLE DRIVE FOLDER AUTO-SYNC ENGINE
+        ---------------------------------------------------- */
+        // Set your free Google Apps Script web endpoint URL here once deployed
+        const AUTO_SYNC_ENDPOINT = "https://script.google.com/macros/s/AKfycbzH42W3khhx132pFvWZE4jgGYnq5CZnC-C3CgnV-tUNtOdZsQXkCdOWOV8HZB6eViNa/exec";
+
+        // Fallback photos displayed automatically if drive folder is empty
+        const defaultPhotos = [
+            { url: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?q=80&w=1200" },
+            { url: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=1200" },
+            { url: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1200" },
+            { url: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=1200" },
+            { url: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200" },
+            { url: "https://images.unsplash.com/photo-1468359601543-843bfaef291a?q=80&w=1200" }
+        ];
+
+        let currentPhotos = [...defaultPhotos];
+        let currentSlideIndex = 0;
+
+        // Loads the photo list from the Apps Script via a <script> tag (JSONP).
+        // This avoids the browser CORS/redirect problems that make fetch() fail with "Load failed".
+        function autoSyncDrivePhotos() {
+            let finished = false;
+            let timer = null;
+            const cbName = 'driveSyncCb_' + Date.now();
+            const script = document.createElement('script');
+
+            function finish(data) {
+                if (finished) return;
+                finished = true;
+                clearTimeout(timer);
+                delete window[cbName];
+                script.remove();
+                if (Array.isArray(data) && data.length > 0) {
+                    currentPhotos = data;
+                } else {
+                    console.warn("Drive sync returned no photos, using defaults:", data);
+                }
+                renderGalleryGrid();
+                showSlide(0);
+                startSlideshow();
+            }
+
+            window[cbName] = finish;
+            script.onerror = () => { console.error("Drive sync: script failed to load"); finish(null); };
+            timer = setTimeout(() => { console.error("Drive sync: timed out"); finish(null); }, 10000);
+            script.src = AUTO_SYNC_ENDPOINT + '?callback=' + cbName;
+            document.head.appendChild(script);
+        }
+
+        function showSlide(index) {
+            if (currentPhotos.length === 0) return;
+            currentSlideIndex = (index + currentPhotos.length) % currentPhotos.length;
+            const photo = currentPhotos[currentSlideIndex];
+            const img = document.getElementById('slideshow-img');
+
+            img.style.opacity = '0.3';
+            setTimeout(() => {
+                img.src = photo.url;
+                img.style.opacity = '1';
+            }, 100);
+        }
+
+        function nextSlide() { showSlide(currentSlideIndex + 1); }
+        function prevSlide() { showSlide(currentSlideIndex - 1); }
+
+        function startSlideshow() {
+            setInterval(nextSlide, 4000);
+        }
+
+        function renderGalleryGrid() {
+            const grid = document.getElementById('gallery-grid');
+            if (!grid) return;
+            grid.innerHTML = '';
+
+            currentPhotos.forEach((photo, idx) => {
+                const item = document.createElement('div');
+                item.className = 'glass-panel rounded-lg overflow-hidden cursor-pointer aspect-video bg-slate-900 border border-slate-800 hover:border-neonCyan transition-all';
+                item.onclick = () => showSlide(idx);
+
+                item.innerHTML = `<img src="${photo.url}" referrerpolicy="no-referrer" loading="lazy" class="w-full h-full object-cover">`;
+                grid.appendChild(item);
+            });
+        }
+
+        /* ----------------------------------------------------
+           2. INTERACTIVE STAGE SIMULATOR
+        ---------------------------------------------------- */
+        const simCanvas = document.getElementById('interactive-stage-canvas');
+        const sCtx = simCanvas.getContext('2d');
+
+        function resizeSimCanvas() {
+            if (!simCanvas || !simCanvas.parentElement) return;
+            simCanvas.width = simCanvas.parentElement.clientWidth;
+            simCanvas.height = simCanvas.parentElement.clientHeight;
+        }
+        window.addEventListener('resize', resizeSimCanvas);
+
+        let simParticles = [];
+        let activeFx = { sparks: false, co2: false, fog: false, lasers: false, confetti: false, flames: false };
+
+        function toggleFxSystem(type) {
+            activeFx[type] = !activeFx[type];
+            const btn = document.getElementById(`sim-btn-${type}`);
+            if (btn) btn.classList.toggle('bg-slate-800');
+        }
+
+        function triggerAllSimFX() {
+            Object.keys(activeFx).forEach(k => { activeFx[k] = true; });
+        }
+
+        function clearSimStage() {
+            Object.keys(activeFx).forEach(k => { activeFx[k] = false; });
+            simParticles = [];
+        }
+
+        let laserAngle = 0;
+        function animateSim() {
+            sCtx.fillStyle = 'rgba(2, 2, 6, 0.25)';
+            sCtx.fillRect(0, 0, simCanvas.width, simCanvas.height);
+            const W = simCanvas.width, H = simCanvas.height;
+
+            if (activeFx.sparks) {
+                simParticles.push({ type: 'spark', x: W * 0.3, y: H - 5, vx: (Math.random()-0.5)*3, vy: -(Math.random()*7 + 5), life: 1 });
+                simParticles.push({ type: 'spark', x: W * 0.7, y: H - 5, vx: (Math.random()-0.5)*3, vy: -(Math.random()*7 + 5), life: 1 });
+            }
+            if (activeFx.co2 && Math.random() < 0.6) {
+                simParticles.push({ type: 'co2', x: W * 0.5, y: H - 5, vx: (Math.random()-0.5)*4, vy: -(Math.random()*10 + 8), life: 1, size: 10 });
+            }
+            if (activeFx.confetti && Math.random() < 0.5) {
+                simParticles.push({ type: 'confetti', x: Math.random() * W, y: 10, vx: (Math.random()-0.5)*3, vy: Math.random()*3 + 2, life: 1, color: '#00f3ff' });
+            }
+
+            for (let i = simParticles.length - 1; i >= 0; i--) {
+                let p = simParticles[i];
+                p.x += p.vx; p.y += p.vy;
+                if (p.type === 'spark') { p.life -= 0.025; sCtx.fillStyle = '#ffb700'; sCtx.fillRect(p.x, p.y, 2, 5); }
+                else if (p.type === 'co2') { p.size += 0.5; p.life -= 0.03; sCtx.fillStyle = `rgba(0, 243, 255, ${p.life*0.4})`; sCtx.beginPath(); sCtx.arc(p.x, p.y, p.size, 0, Math.PI*2); sCtx.fill(); }
+                else if (p.type === 'confetti') { p.life -= 0.01; sCtx.fillStyle = p.color; sCtx.fillRect(p.x, p.y, 5, 3); }
+                if (p.life <= 0) simParticles.splice(i, 1);
+            }
+            requestAnimationFrame(animateSim);
+        }
+
+        function handleInquirySubmit(e) {
+            e.preventDefault();
+            document.getElementById('inquiry-success').classList.remove('hidden');
+            e.target.reset();
+        }
+
+        window.onload = function() {
+            resizeSimCanvas();
+            animateSim();
+            autoSyncDrivePhotos();
+        };
+    </script>
+</body>
+</html>
